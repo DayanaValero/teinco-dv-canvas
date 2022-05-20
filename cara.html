@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Canvas Dayana Valero</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>API Canvas Dayana Valero</title>
+    </head>
+
+    <body>
+        <canvas id="cara" width="680" height="680"></canvas>
+        <script>
+            var c = document.getElementById("cara");
+            var ctx = c.getContext("2d");
+
+            //Cara
+            ctx.fillStyle = '#ffd60a';
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 5;
+            ctx.beginPath();
+            ctx.arc(320, 240, 200, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+
+            //Ojos
+            ctx.fillStyle = 'black'
+            ctx.beginPath();
+            ctx.arc(270, 175, 30, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.arc(370, 175, 30, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+
+            //Boca
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 5;
+            ctx.beginPath();
+            ctx.arc(320, 240, 150, 0, -1 * Math.PI);
+            ctx.stroke();
+            ctx.closePath();
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Canvas Dayana Valero</title>
+</head>
+
+<body>
+    <canvas id="casa" width="300" height="300" style="background-color: #caf0f8;"></canvas>
+    <script>
+        var canvas = document.getElementById('casa');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+            ctx.lineWidth = 5;
+
+            // Extructura
+            ctx.fillStyle = 'white';
+            ctx.fillRect(75, 140, 150, 110);
+            ctx.strokeRect(75, 140, 150, 110);
+
+            // Puerta
+            ctx.fillStyle = '#804000';
+            ctx.fillRect(130, 187, 40, 60);
+
+            //cesped
+            ctx.fillStyle = 'green';
+            ctx.fillRect(0, 252, 300, 50);
+
+            // Techo
+            ctx.beginPath();
+            ctx.moveTo(50, 140);
+            ctx.lineTo(150, 60);
+            ctx.lineTo(250, 140);
+            ctx.closePath();
+            ctx.stroke();
+
+            ctx.fillStyle = 'red';
+            ctx.fill();
+
+
+
+        }
+
+        /*const ctx = canvas.getContext('2d');
+
+        // Parametros de lines
+        ctx.lineWidth = 10;
+
+        // Extructura
+        ctx.strokeRect(75, 140, 150, 110);
+
+        // Puerta
+        ctx.fillRect(130, 190, 40, 60);
+
+        // Techo
+        ctx.beginPath();
+        ctx.moveTo(50, 140);
+        ctx.lineTo(150, 60);
+        ctx.lineTo(250, 140);
+        ctx.closePath();
+        ctx.stroke();*/
+    </script>
+</body>
+
+</html>
